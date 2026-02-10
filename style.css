@@ -339,53 +339,56 @@ padding-top: 60px;
 }
 /*-----page for the quotes----*/
 
+
 #section-quote {
   width: 100%;
 }
 
-
 .Quote-page {
   min-height: 100vh;
+  padding: 40px 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;   
-  align-items: center;        
+  align-items: center;
   text-align: center;
 }
 
-
+/* TOP TEXT */
 .quote {
   max-width: 800px;
+  margin-bottom: 25px;
 }
 
-
+/* QUOTE BOXES */
 .quote-box {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;       
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
 }
-
 
 .box-1 {
   background-color: #c0b5b5;
-  height: 45px;
-  width: 90%;                 
-  max-width: 700px;           
-  margin-top: 15px;
   border-radius: 25px;
+  padding: 18px 20px;
+  font-size: 14px;
 }
 
+.box-1 p {
+  color: #0B1C2D;
+  line-height: 1.5;
+}
+
+/* BUTTONS */
 .btn-container-4 {
   width: 100%;
   max-width: 700px;
   display: flex;
-  justify-content: space-between;
   gap: 15px;
-  margin: 30px 0;
-  padding: 0 15px;
+  padding: 0 10px;
 }
-
 
 .btn-container-4 button {
   flex: 1;
@@ -393,26 +396,15 @@ padding-top: 60px;
   border-radius: 30px;
   background-color: #3b82f6;
   padding: 12px 0;
-  cursor: pointer;
-}
-
-/* LINK INSIDE BUTTON */
-.btn-container-4 button a {
-  text-decoration: none;
   color: white;
   font-size: 14px;
   font-weight: 500;
-  display: block;
-  width: 100%;
+  cursor: pointer;
 }
-
 
 .btn-container-4 button:hover {
-  background-color: #2563eb;
+  background-color:  #2563eb;;
 }
-
-
-
 
 
 /* page 4 memories */
@@ -629,22 +621,45 @@ font-size:14px;
 }
 
 
-
-@media (max-width: 600px) {
+@media (min-width: 768px) {
   .Quote-page {
-    justify-content: flex-start;  
-    padding-top: 30px;
+    padding: 50px 20px;
+  }
+
+  .quote {
+    max-width: 800px;
+  }
+
+  .quote h1 {
+    font-size: 30px;
+  }
+
+  .quote p {
+    font-size: 16px;
+  }
+
+  .quote h4 {
+    font-size: 15px;
+  }
+
+  .quote-box {
+    max-width: 900px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
   }
 
   .box-1 {
-    height: 40px;
+    font-size: 15px;
+    padding: 20px;
   }
 
   .btn-container-4 {
-    position: sticky;
-    bottom: 10px;
-    background: #1F2A44;  
-    padding: 15px;
-    border-radius: 20px;
+    max-width: 700px;
+    gap: 15px;
+  }
+
+  .btn-container-4 button {
+    font-size: 14px;
   }
 }
+
